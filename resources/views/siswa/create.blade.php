@@ -20,7 +20,7 @@
                 @include('layouts/_flash')
                 <div class="card">
                     <div class="card-header" style= "background-image: url(../img/bck2.png)">
-                        Data Siswa
+                        Data siswa
                     </div>
                     <div class="card-body">
                         <form action="{{ route('siswa.store') }}" method="post">
