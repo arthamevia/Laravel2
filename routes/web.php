@@ -35,3 +35,7 @@ Route::get('relasi-1', function () {
 
 // relsasi one to many
 Route::get('/posts', [\App\Http\Controllers\PostController::class, 'index']);
+
+Route::get('/', function () {
+    return view('users');
+});

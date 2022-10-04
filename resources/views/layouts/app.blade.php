@@ -53,6 +53,16 @@
                                 Siswa
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('siswa.index') }}">
+                                One to One
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('siswa.index') }}">
+                                One to Many
+                            </a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
