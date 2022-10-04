@@ -9,9 +9,10 @@ class Wali extends Model
 {
     use HasFactory;
     
-    protected $fillable =['nama', 'id_mahasiswa'];
+    protected $fillable = ['nama', 'id_mahasiswa'];
 
-    public function mahasiswa() {
+    public function mahasiswa()
+    {
         return $this->belongsTo('App\Models\Mahasiswa', 'id_mahasiswa');
     }
 }
