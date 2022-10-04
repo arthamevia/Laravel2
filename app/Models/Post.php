@@ -14,3 +14,6 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 }
+
+
+// https://santrikoding.com/tutorial-laravel-eloquent-relationships-4-one-to-many

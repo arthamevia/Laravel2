@@ -42,3 +42,5 @@
     </div>
 </body>
 </html>
+
+<!-- https://santrikoding.com/tutorial-laravel-eloquent-relationships-4-one-to-many -->
