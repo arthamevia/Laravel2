@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $this->call(RelasiSeeder::class);
+        $this->command->info('SeederRelasi berhasil.');
     }
 }

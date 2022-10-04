@@ -24,3 +24,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // siswa
 Route::resource('siswa', SiswaController::class);
+
+// relasi one to one https://medium.com/@candraherdiansyah14/penalaran-relasi-database-laravel-8-7730cd561bae
+Route::get('relasi-1', function () {
+   
+    $wali = App\Models\Wali::all();
+
+    return $wali[0]->nama;
+});
