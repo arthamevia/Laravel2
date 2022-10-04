@@ -33,3 +33,4 @@ Route::get('relasi-1', function () {
     return $wali[0]->nama;
 });
 
+Route::get('/posts', [\App\Http\Controllers\PostController::class, 'index']);
