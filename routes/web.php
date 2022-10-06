@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\MtMController;
+use App\Http\Controllers\ExtracurricularController;
 use App\Models\Anggota;
 use App\Models\Hadiah;
 
@@ -33,16 +34,18 @@ Route::get('relasi-1', function () {
    
     $wali = App\Models\Wali::all();
 
-    return $wali[0]->nama;
+    return $wali[2]->nama;
 });
 
 // relsasi one to many
 Route::get('/posts', [\App\Http\Controllers\PostController::class, 'index']);
 
-Route::get('/', function () {
-    return view('users');
-});
+// Route::get('/', function () {
+//     return view('users');
+// });
 
 
 // Many to Many
 Route::get('/anggota', [\App\Http\Controllers\MtMController::class, 'index']);
+
+Route::get('/extracurricular', [ExtracurricularController::class, 'index']);

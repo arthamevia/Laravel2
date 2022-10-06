@@ -54,13 +54,18 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('siswa.index') }}">
+                            <a class="nav-link" href="/relasi-1">
                                 One to One
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('siswa.index') }}">
+                            <a class="nav-link" href="/posts">
                                 One to Many
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/anggota">
+                                Many to Many
                             </a>
                         </li>
                     </ul>
