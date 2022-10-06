@@ -6,6 +6,9 @@ use App\Http\Controllers\MtMController;
 use App\Http\Controllers\ExtracurricularController;
 use App\Models\Anggota;
 use App\Models\Hadiah;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,8 +47,12 @@ Route::get('/posts', [\App\Http\Controllers\PostController::class, 'index']);
 //     return view('users');
 // });
 
-
 // Many to Many
 Route::get('/anggota', [\App\Http\Controllers\MtMController::class, 'index']);
-
 Route::get('/extracurricular', [ExtracurricularController::class, 'index']);
+// role
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles', RoleController::class);
+    Route::resource('users', UserController::class);
+    Route::resource('products', ProductController::class);
+});

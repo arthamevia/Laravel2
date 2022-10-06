@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class SiswaController extends Controller
 {
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
     /**
      * Display a listing of the resource.
      *
@@ -14,6 +18,7 @@ class SiswaController extends Controller
      */
     public function index()
     {
+        
         $siswa = Siswa::all();
         return view('siswa.index', compact('siswa'));
     }
